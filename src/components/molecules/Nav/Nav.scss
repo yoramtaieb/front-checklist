@@ -1,0 +1,113 @@
+@import "../../_settings/mixins";
+@import "../../_settings/variables";
+.nav {
+    padding: 20px 20px;
+    @include media(laptop) {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+    &_heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &_title {
+            h1 {
+                font-size: 1.4rem;
+                font-family: "Poppins-ExtraBold";
+                color: $purple;
+            }
+        }
+        &_burger {
+            width: 30px;
+            height: 24px;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: 0.5s ease-in-out;
+            -moz-transition: 0.5s ease-in-out;
+            -o-transition: 0.5s ease-in-out;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+            span {
+                display: block;
+                position: absolute;
+                height: 3.5px;
+                width: 100%;
+                background-color: $purple;
+                border-radius: 8px;
+                opacity: 1;
+                left: 0;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transition: 0.25s ease-in-out;
+                -moz-transition: 0.25s ease-in-out;
+                -o-transition: 0.25s ease-in-out;
+                transition: 0.25s ease-in-out;
+                &:nth-child(1) {
+                    top: 0px;
+                }
+                &:nth-child(2) {
+                    top: 10px;
+                }
+                &:nth-child(3) {
+                    top: 10px;
+                }
+                &:nth-child(4) {
+                    top: 20px;
+                }
+            }
+        }
+        .nav_heading_burger.open span:nth-child(1) {
+            top: 18px;
+            width: 0%;
+            left: 50%;
+        }
+        .nav_heading_burger.open span:nth-child(2) {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .nav_heading_burger.open span:nth-child(3) {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        .nav_heading_burger.open span:nth-child(4) {
+            top: 18px;
+            width: 0%;
+            left: 50%;
+        }
+    }
+    &_menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            font-family: "Poppins-Bold";
+            font-size: 1rem;
+            padding: 1px 12px;
+        }
+        &_signin {
+            color: $purple;
+        }
+        &_signup {
+            color: $beige;
+            background: $purple;
+            border-radius: 25px;
+        }
+        img {
+            height: 42px;
+        }
+    }
+}
+
+// .active {
+//     display: flex;
+//     @include animation("slide 0.8s");
+// }
