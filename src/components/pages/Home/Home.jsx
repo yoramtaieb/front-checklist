@@ -13,6 +13,7 @@ export default function Item() {
             toujours plus de choses.
           </h2>
         </div>
+        <img src={imgHome} alt="img-home" />
         <div className="home_paragraph">
           <h3>
             Les tableaux, listes et cartes de Forecast permettent aux équipes
@@ -20,7 +21,6 @@ export default function Item() {
             façon amusante, souple et enrichissante.
           </h3>
         </div>
-        <img src={imgHome} alt="img-home" />
       </div>
     </>
   );
