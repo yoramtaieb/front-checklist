@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import toggle from "../../../img/togglemoon.svg";
+import Toggle from "../../darkmode/Toggle";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "../../darkmode/globalStyles";
+import { lightTheme, darkTheme } from "../../darkmode/Theme";
+import { useDarkMode } from "../../darkmode/useDarkMode";
 
 import "./Nav.scss";
 
@@ -9,6 +13,10 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   const onClick = () => setOpen(!open);
+
+  const [theme, themeToggler] = useDarkMode();
+
+  const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   return (
     <>
@@ -36,7 +44,12 @@ export default function Nav() {
           <NavLink to="/signup">
             <p className="nav_menu_signup">Inscription</p>
           </NavLink>
-          <img src={toggle} alt="toggle" />
+          <div className="nav_menu_img">
+            <ThemeProvider theme={themeMode}>
+              <GlobalStyles />
+              <Toggle theme={theme} toggleTheme={themeToggler} />
+            </ThemeProvider>
+          </div>
         </div>
       </nav>
     </>

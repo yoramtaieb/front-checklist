@@ -3,7 +3,7 @@ import Nav from "../../molecules/Nav/Nav";
 
 import "./Header.scss";
 
-export default function Item() {
+export default function Header() {
   return (
     <>
       <Nav />
