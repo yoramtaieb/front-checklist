@@ -24,12 +24,15 @@ body {
   .nav_menu_signup {
     background: ${({ theme }) => theme.text};
     color: ${({ theme }) => theme.body};
+    &:hover {
+    background: ${({ theme }) => theme.hover2};
+    }
   }
   .button-pathTwo {
     fill: ${({ theme }) => theme.body};
   }
   .nav_menu {
-    box-shadow: ${({ theme }) => theme.shadow};
+    box-shadow: ${({ theme }) => theme.boxshadow};
   }
   .signin_container,
   .signin_container_form_input input,
@@ -57,6 +60,13 @@ body {
   .signup_container_form_button button {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
+  }
+  .signin_container_form_button button,
+  .signin_container_signup_button button,
+  .signup_container_form_button button {
+    &:hover{
+      background: ${({ theme }) => theme.hover};
+    }
   }
   .signin_container_hr hr {
     background: ${({ theme }) => theme.body};

@@ -1,6 +1,10 @@
 @import "../../_settings/variables";
+@import "../../_settings/mixins";
 .signin {
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &_heading {
         display: flex;
         flex-direction: column;
@@ -21,6 +25,9 @@
         margin: 30px 20px 0 20px;
         padding: 30px;
         border-radius: 20px;
+        @include media(tablet) {
+            width: 500px;
+        }
         &_form {
             &_input {
                 display: flex;
@@ -52,6 +59,10 @@
                     width: 123px;
                     height: 24px;
                     border-radius: 25px;
+                    cursor: pointer;
+                    &:hover {
+                        background: $beige-dark;
+                    }
                 }
             }
         }
@@ -84,6 +95,10 @@
                     width: 123px;
                     height: 24px;
                     border-radius: 25px;
+                    cursor: pointer;
+                    &:hover {
+                        background: $beige-dark;
+                    }
                 }
             }
         }

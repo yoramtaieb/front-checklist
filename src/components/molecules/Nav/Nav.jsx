@@ -38,7 +38,7 @@ export default function Nav() {
           </div>
         </div>
         <div className={open ? "nav_menu active" : "nav_menu"}>
-          <NavLink to="/signin">
+          <NavLink to="/">
             <p className="nav_menu_signin">Connexion</p>
           </NavLink>
           <NavLink to="/signup">
