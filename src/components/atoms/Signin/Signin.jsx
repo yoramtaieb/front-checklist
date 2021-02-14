@@ -47,7 +47,7 @@ export default function Signin() {
               <h3>Toujours pas de compte ? Inscrivez-vous gratuitement !</h3>
             </div>
             <div className="signin_container_signup_button">
-              <NavLink to="/signup">
+              <NavLink to="/forecast/signup">
                 <button>S'INSCRIRE</button>
               </NavLink>
             </div>

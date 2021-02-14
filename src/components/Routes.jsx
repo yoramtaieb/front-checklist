@@ -9,7 +9,7 @@ export default function Routes() {
   return (
     <Switch>
       <Route exact path="/" component={Signin} />
-      <Route exact path="/signup" component={Signup} />
+      <Route exact path="/forecast/signup" component={Signup} />
       <Route path="*" component={NoMatch} />
     </Switch>
   );

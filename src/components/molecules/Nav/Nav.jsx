@@ -41,7 +41,7 @@ export default function Nav() {
           <NavLink to="/">
             <p className="nav_menu_signin">Connexion</p>
           </NavLink>
-          <NavLink to="/signup">
+          <NavLink to="/forecast/signup">
             <p className="nav_menu_signup">Inscription</p>
           </NavLink>
           <div className="nav_menu_img">
