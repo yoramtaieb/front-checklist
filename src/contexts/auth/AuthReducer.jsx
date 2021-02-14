@@ -3,7 +3,6 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "SIGNIN":
       localStorage.setItem("token", action.payload.data.token);
-      localStorage.setItem("user", action.payload.data.user.id);
       console.log(action.payload);
       return {
         ...state,

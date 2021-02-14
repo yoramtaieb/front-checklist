@@ -12,7 +12,6 @@ import Footer from "./components/organisms/Footer/Footer";
 
 import AuthContext from "./contexts/auth/Auth";
 import AuthReducer from "./contexts/auth/AuthReducer";
-// import UserContext from "./contexts/user/UserContext";
 
 import "./App.scss";
 
@@ -29,34 +28,7 @@ function App() {
     dispatch,
   };
 
-  // const [user, setUser] = useState([]);
-  // const userValue = {
-  //   user,
-  //   setUser,
-  // };
-
-  // useEffect(() => {
-  //   const fetchUser = async () => {
-  //     const token = localStorage.getItem("token");
-
-  //     if (token) {
-  //       const result = await axios(`http://localhost:5000/leboncoin/user/me`, {
-  //         headers: {
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       });
-  //       setUser(result.data);
-  //       dispatch({
-  //         type: "LOAD_USER",
-  //         payload: result.data,
-  //       });
-  //     }
-  //   };
-  //   fetchUser();
-  // }, []);
-
   const [theme] = useDarkMode();
-
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   return (

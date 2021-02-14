@@ -1,9 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import useSignin from "./useSignin";
+
 import "./Signin.scss";
 
 export default function Signin() {
+  const { connexion, handleChange, handleSubmit } = useSignin();
+
   return (
     <>
       <div className="signin">
@@ -16,13 +20,14 @@ export default function Signin() {
           </div>
         </div>
         <div className="signin_container">
-          <form action="#" className="signin_container_form">
+          <form onSubmit={handleSubmit} className="signin_container_form">
             <div className="signin_container_form_input">
               <label htmlFor="#">EMAIL</label>
               <input
                 type="email"
-                name="#"
-                id="#"
+                name="email"
+                onChange={handleChange}
+                value={connexion.email}
                 placeholder="Entrez votre email"
               />
             </div>
@@ -30,13 +35,23 @@ export default function Signin() {
               <label htmlFor="#">MOT DE PASSE</label>
               <input
                 type="password"
-                name="#"
-                id="#"
+                name="password"
+                onChange={handleChange}
+                value={connexion.password}
                 placeholder="Entrez votre mot de passe"
               />
             </div>
+            {connexion.errorMessage && (
+              <div className="error">
+                <span className="message">
+                  {connexion.errorMessage.data.description}
+                </span>
+              </div>
+            )}
             <div className="signin_container_form_button">
-              <button>SE CONNECTER</button>
+              <button disabled={connexion.isSubmitting} type="submit">
+                SE CONNECTER
+              </button>
             </div>
           </form>
           <div className="signin_container_hr">
