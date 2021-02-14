@@ -1,12 +1,8 @@
 import React from "react";
 
-import useSignup from "./useSignup";
-
 import "./Signup.scss";
 
 export default function Signup() {
-  const { inputs, handleInputChange, handleSubmit } = useSignup();
-
   return (
     <>
       <div className="signup">
@@ -19,60 +15,40 @@ export default function Signup() {
           </div>
         </div>
         <div className="signup_container">
-          <form
-            onSubmit={handleSubmit}
-            noValidate
-            className="signup_container_form"
-          >
+          <form action="#" className="signup_container_form">
             <div className="signup_container_form_input">
-              <label htmlFor="firstName">PRÉNOM</label>
+              <label htmlFor="#">NOM</label>
+              <input type="text" name="#" id="#" placeholder="Entrez un nom" />
+            </div>
+            <div className="signup_container_form_input">
+              <label htmlFor="#">PRÉNOM</label>
               <input
                 type="text"
-                name="firstName"
-                onChange={handleInputChange}
-                value={inputs.firstName}
+                name="#"
+                id="#"
                 placeholder="Entrez un prénom"
               />
             </div>
             <div className="signup_container_form_input">
-              <label htmlFor="lastName">NOM</label>
-              <input
-                type="text"
-                name="lastName"
-                onChange={handleInputChange}
-                value={inputs.lastName}
-                placeholder="Entrez un nom"
-              />
-            </div>
-            <div className="signup_container_form_input">
-              <label htmlFor="email">EMAIL</label>
+              <label htmlFor="#">EMAIL</label>
               <input
                 type="email"
-                name="email"
-                onChange={handleInputChange}
-                value={inputs.email}
+                name="#"
+                id="#"
                 placeholder="Entrez un email"
               />
             </div>
             <div className="signup_container_form_input">
-              <label htmlFor="password">MOT DE PASSE</label>
+              <label htmlFor="#">MOT DE PASSE</label>
               <input
                 type="password"
-                name="password"
-                onChange={handleInputChange}
-                value={inputs.password}
+                name="#"
+                id="#"
                 placeholder="Entrez un mot de passe"
               />
             </div>
-            {inputs.errorMessage && (
-              <div className="error">
-                <span className="message">
-                  {inputs.errorMessage.data.errors[0].message}
-                </span>
-              </div>
-            )}
             <div className="signup_container_form_button">
-              <button type="submit">S'INSCRIRE</button>
+              <button>S'INSCRIRE</button>
             </div>
           </form>
         </div>

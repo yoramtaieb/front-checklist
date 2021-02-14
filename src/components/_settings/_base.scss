@@ -1,16 +1,3 @@
-@import "./mixins";
 body {
-    background-color: $beige;
-}
-
-.error {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 25px;
-    .message {
-        color: rgb(218, 23, 23);
-        font-family: "Poppins-Medium";
-        font-size: 0.8rem;
-        text-align: center;
-    }
+  background-color: $beige;
 }
