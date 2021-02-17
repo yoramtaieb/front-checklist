@@ -37,7 +37,8 @@ body {
   .signin_container,
   .signin_container_form_input input,
   .signup_container,
-  .signup_container_form_input input {
+  .signup_container_form_input input,
+  .lists {
     background: ${({ theme }) => theme.text};
   }
   .signin_container_form_input input,
@@ -70,5 +71,17 @@ body {
   }
   .signin_container_hr hr {
     background: ${({ theme }) => theme.body};
+  }
+  .lists_icon button {
+    background: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.body};
+  }
+  .lists_paragraph input {
+    background: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.body};
+    &::placeholder{
+      color: ${({ theme }) => theme.body};
+    }
+  }
   }
   `;

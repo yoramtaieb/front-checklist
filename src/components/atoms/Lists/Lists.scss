@@ -1,0 +1,35 @@
+@import "../../_settings/variables";
+.lists {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 50px 20px 200px 20px;
+    border-radius: 5px;
+    padding: 5px;
+    &_icon {
+        button {
+            font-size: 1.6rem;
+            color: $beige;
+            margin-right: 10px;
+            font-family: "Poppins-SemiBold";
+            background: rgba(48, 30, 112, 0.5);
+            border: none;
+        }
+    }
+    &_paragraph {
+        font-size: 1.3rem;
+        color: $beige;
+        input {
+            background: rgba(48, 30, 112, 0.5);
+            border-radius: 5px;
+            border: none;
+            color: $beige;
+            font-size: 1.2rem;
+            font-family: "Poppins-SemiBold";
+            width: 100%;
+            &::placeholder {
+                color: $beige;
+            }
+        }
+    }
+}
