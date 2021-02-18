@@ -127,5 +127,8 @@
     .active {
         display: flex;
         @include animation("slide 0.8s");
+        @include media(laptop) {
+            @include animation("none");
+        }
     }
 }

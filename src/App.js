@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import { ThemeProvider } from "styled-components";
@@ -12,6 +12,7 @@ import Footer from "./components/organisms/Footer/Footer";
 
 import AuthContext from "./contexts/auth/Auth";
 import AuthReducer from "./contexts/auth/AuthReducer";
+import ListsContext from "./contexts/lists/Lists";
 
 import "./App.scss";
 
@@ -28,20 +29,28 @@ function App() {
     dispatch,
   };
 
+  const [lists, setLists] = useState([]);
+  const listsValue = {
+    lists,
+    setLists,
+  };
+
   const [theme] = useDarkMode();
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   return (
     <Router>
       <AuthContext.Provider value={authValue}>
-        <ThemeProvider theme={themeMode}>
-          <>
-            <GlobalStyles />
-            <Header />
-            <Routes />
-            <Footer />
-          </>
-        </ThemeProvider>
+        <ListsContext.Provider value={listsValue}>
+          <ThemeProvider theme={themeMode}>
+            <>
+              <GlobalStyles />
+              <Header />
+              <Routes />
+              <Footer />
+            </>
+          </ThemeProvider>
+        </ListsContext.Provider>
       </AuthContext.Provider>
     </Router>
   );

@@ -38,8 +38,15 @@ body {
   .signin_container_form_input input,
   .signup_container,
   .signup_container_form_input input,
-  .lists {
+  .lists,
+  .container_list {
     background: ${({ theme }) => theme.text};
+  }
+  .container_list p {
+    color: ${({ theme }) => theme.body};
+  }
+  .container_list svg path {
+    fill: ${({ theme }) => theme.body};
   }
   .signin_container_form_input input,
   .signup_container_form_input input {

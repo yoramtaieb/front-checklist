@@ -3,7 +3,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 50px 20px 200px 20px;
+    margin: 50px 20px 30px 20px;
     border-radius: 5px;
     padding: 5px;
     &_icon {
@@ -12,7 +12,7 @@
             color: $beige;
             margin-right: 10px;
             font-family: "Poppins-SemiBold";
-            background: rgba(48, 30, 112, 0.5);
+            background: $purple;
             border: none;
         }
     }
@@ -20,7 +20,7 @@
         font-size: 1.3rem;
         color: $beige;
         input {
-            background: rgba(48, 30, 112, 0.5);
+            background: $purple;
             border-radius: 5px;
             border: none;
             color: $beige;
@@ -31,5 +31,20 @@
                 color: $beige;
             }
         }
+    }
+}
+
+.container_list {
+    margin: 10px 20px 5px 20px;
+    background: $purple;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+        padding: 10px;
+        font-size: 1.1rem;
+        font-family: "Poppins-Medium";
+        color: $beige;
     }
 }
