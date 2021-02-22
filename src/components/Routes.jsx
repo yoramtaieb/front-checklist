@@ -12,8 +12,8 @@ export default function Routes() {
     <Switch>
       <Route exact path="/" component={Signin} />
       <Route exact path="/forecast/signup" component={Signup} />
-      {/* <PrivateRoute exact path="/forecast/lists" component={Lists} /> */}
       <Route exact path="/forecast/lists" component={Lists} />
+      {/* <PrivateRoute exact path="/forecast/lists" component={Lists} /> */}
       <Route path="*" component={NoMatch} />
     </Switch>
   );
